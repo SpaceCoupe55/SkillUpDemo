@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Note Taking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My Notes</h1>
+            <p class="subtitle">Write, save, and view your notes</p>
+        </header>
+
+        <!-- Form to create a new note -->
+        <section class="note-form">
+            <h2>Create New Note</h2>
+            <form id="noteForm">
+                <textarea 
+                    id="noteInput" 
+                    placeholder="Write your note here..."
+                    rows="5"
+                    required
+                ></textarea>
+                <button type="submit" id="saveBtn">Save Note</button>
+            </form>
+        </section>
+
+        <!-- Demo SMS Feature Section -->
+        <section class="sms-section">
+            <h2>Send Motivation SMS 💪</h2>
+            <p class="demo-warning">⚠️ Demo Only: This feature is for demonstration purposes. API key is visible in code.</p>
+            <form id="smsForm">
+                <input 
+                    type="text" 
+                    id="phoneInput" 
+                    placeholder="Enter phone number (e.g., 0200463804)"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                />
+                <button type="submit" id="smsBtn">Send Motivation 💪</button>
+            </form>
+            <div id="smsStatus"></div>
+        </section>
+
+        <!-- Section to display saved notes -->
+        <section class="notes-list">
+            <h2>Saved Notes</h2>
+            <div id="notesContainer">
+                <!-- Notes will be displayed here dynamically -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Link to our JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
